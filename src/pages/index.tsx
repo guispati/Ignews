@@ -7,6 +7,9 @@ import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss';
 
+import Image from 'next/image';
+import avatar from '/public/images/avatar.svg';
+
 interface HomeProps {
     product: {
         priceId:string;
@@ -31,7 +34,7 @@ export default function Home({product}: HomeProps ) {
                     <SubscribeButton />
                 </section>
 
-                <img src="/images/avatar.svg" alt="Girl coding" />
+                <Image src={avatar} alt="Girl coding" />
             </main>
         </>
     )
